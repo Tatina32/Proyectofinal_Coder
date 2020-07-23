@@ -1,0 +1,296 @@
+/*variables*/
+//base.scss
+
+$fontGeneral: 'IBM Plex Sans', sans-serif;;
+$colorNaranja:  #FFA07A;
+$colorMarron: #8B4513;
+$colorCielo: #99FFFF;
+$colorLima: #99FF99;
+$colorTitulo: #6B8E23;
+
+ 
+ .container {
+     width: 100%;
+ }
+
+/*INDEX PRINCIPAL*/
+//style.scss
+
+
+
+@mixin sizes($width,$height){
+       height: $height;
+       width: $width;
+}
+
+ body {
+  font-family : $fontGeneral ;
+  line-height: 1.5;
+  text-align: justify;
+  font-style: normal;
+  color: $colorMarron; 
+  font-size: 14px;
+
+  /*ENCABEZADO DE PAGINA (HEADER)*/
+
+/*BARRA DE MENU PRINCIPAL*/
+
+  .navbar {
+  height: 100px;
+  font-size: 23px;
+  background-color: $colorNaranja;
+
+  .navbar-collapse {
+  background-color: $colorNaranja;
+                   }
+            }
+ 
+   .carousel-caption p{
+        background-color:$colorCielo;
+   }
+  /*CUERPO DE PAGINA */
+
+  h1 {
+     text-align: center; 
+     font-size: 50px;
+     }
+  h2 {
+     text-align: center;
+     color: $colorTitulo;
+     }
+  
+    .parrafo1 p{
+      text-align: center;
+      margin: 10%;
+      background-color: $colorCielo;
+              }
+
+      video {
+          display: flex;
+           margin:5%;
+      }
+      
+
+
+$parra: tema3; // aqui cambio y cambia los colores
+    
+    .parrafo2 p{
+     /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ecuador_Gal%C3%A1pagos_Islands_location_map.svg/275px-Ecuador_Gal%C3%A1pagos_Islands_location_map.svg.png);*/
+      height: 300px;
+      text-align: center;
+      margin: 10%;
+
+             
+               @if $parra == tema1 {
+                   color: blue;
+                             }
+                @else if $parra == tema2 {
+                   color:red;
+                              }
+                @else if $parra == tema3 {
+                   color:greenyellow;
+                             }
+                @else {
+                    color:black;
+                      }
+              }
+
+    .videoUbicacion video {
+       display: flex;
+       margin: 5%;
+
+                       }
+    .imgEco img {
+     display: flex;
+     margin: 5%;
+     @include sizes (300px,300px);
+  
+              }
+
+    .imgBuenasPracticas img {
+       display: flex;
+       margin: 5%;
+  
+                        }
+
+    @each $boton in yellow, blue, red {
+     .#{$boton} {
+        padding: 10px 20px;
+        border: none;
+        background-color: $boton;
+    }
+}
+
+  footer {
+      /*EL PIE DE PAGINA (FOOTER)*/
+
+      .pieDePagina {
+         display: flex;
+         flex-direction: row; 
+         justify-content: space-around;
+         padding:30px ;
+         background-color: $colorLima;#FF9966
+
+        .direccion {
+            
+            padding: 5px;
+            margin: 5px;
+        }
+        .formulario form{
+            position: column;
+            /*border-radius: 20px;*/
+            border: 3px solid #8B4513 ;
+            padding: 5px;
+            margin: 5px;
+            
+
+           input {
+              @include sizes (100px,30px);
+              transition: all 2s;
+            }
+           input:focus {
+               @include sizes (300px,60px);
+              font-size: 24px;
+                  }
+                 }
+                       }
+
+        .pieEnlaces {
+             flex-direction: row;
+            /*position: row;*/
+            background-color:$colorCielo;
+            padding: 10px;
+            margin: 5px;
+
+                .redes--redesSociales img {
+         
+                    @include sizes(40px,40px);
+
+                      $redesSociales: (
+                      facebook:#99FFFF,
+                      instagram:#99FFFF,
+                      twitter:#99FF99,
+                      whatssap:#99FF99
+                                );
+
+                       @each $black, $color in $redesSociales{
+                          .btn--#{$black} {background-color: $color;}
+                                                     }
+                           }
+  
+                  }
+                
+        }
+
+              
+   
+    
+
+    } /*cierre body*/
+
+
+
+
+
+/*BOTON PARA RESERVAS*/
+.botonReserva {
+  position: -webkit-sticky;
+  position: sticky;
+  border: 2px solid #8B4513;
+  background-color: #99FF99 ;
+  border-radius: 20px;
+    font-size: 20px;
+    top:100px;
+    right: 5px;
+    width: 140px;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
+}
+
+
+
+
+
+/* VIEWS ALOJAMIENTOS*/
+
+.descripcion {
+  display: flex;
+  background-color: #99FF99;
+  align-items: center;
+  flex-direction: row; 
+  justify-content: space-around;
+  padding:30px ;
+}
+.servicios {
+  display: flex;
+  background-color: #99FFFF;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: space-around;
+  padding:30px ;
+
+       .listServicios {
+         display: flex;
+         flex-direction: column;
+                    }
+          }
+.cf {
+   position: relative;
+   margin: 0 auto; 
+   height: 400px;
+   width: 450px;
+
+}
+#cf img {
+  position: absolute;
+  left: 0px;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
+
+}
+
+#cf img.top:hover {
+     opacity:0;
+}
+/* VIEWS RESERVAS*/
+
+
+/* VIEWS PRECIOS */
+
+.tablaPrecios table {
+  padding: 20px;
+  border: 4px solid #8B4513 ;
+  margin: 10px;
+
+}
+
+/* VIEWS CONTACTOS*/
+
+.formularioContacto {
+  margin:10px;
+  padding: 10px;
+  background-color: #99FFFF;
+    input {
+              @include sizes (300px,30px);
+              transition: all 2s;
+            }
+           input:focus {
+               @include sizes (500px,60px);
+              font-size: 24px;
+                  }
+  .btn {
+  justify-content: space-around;
+
+      }
+  }
+
+.imgForm {
+  transform: rotate(20deg);
+  transform: rotate(-18deg);
+}
+
+
+

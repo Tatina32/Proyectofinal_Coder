@@ -1,0 +1,173 @@
+/*variables*/
+.container {
+  width: 100%; }
+
+/*INDEX PRINCIPAL*/
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.5;
+  text-align: justify;
+  font-style: normal;
+  color: #8B4513;
+  font-size: 14px;
+  /*ENCABEZADO DE PAGINA (HEADER)*/
+  /*BARRA DE MENU PRINCIPAL*/
+  /*CUERPO DE PAGINA */ }
+  body .navbar {
+    height: 100px;
+    font-size: 23px;
+    background-color: #FFA07A; }
+    body .navbar .navbar-collapse {
+      background-color: #FFA07A; }
+  body h1 {
+    text-align: center;
+    font-size: 50px; }
+  body h2 {
+    text-align: center;
+    color: #6B8E23; }
+  body .parrafo1 p {
+    text-align: center;
+    margin: 10%;
+    background-color: #99FFFF; }
+  body .parrafo2 p {
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ecuador_Gal%C3%A1pagos_Islands_location_map.svg/275px-Ecuador_Gal%C3%A1pagos_Islands_location_map.svg.png);*/
+    height: 300px;
+    text-align: center;
+    margin: 10%;
+    color: greenyellow; }
+  body .videoUbicacion video {
+    display: flex;
+    margin: 5%;
+    
+     }
+  body .imgEco img {
+    display: flex;
+    height: 400px;
+    width: 400px; }
+  body .imgBuenasPracticas img {
+    display: flex;
+     }
+  body .yellow {
+    padding: 10px 20px;
+    border: none;
+    background-color: yellow; }
+  body .blue {
+    padding: 10px 20px;
+    border: none;
+    background-color: blue; }
+  body .red {
+    padding: 10px 20px;
+    border: none;
+    background-color: red; }
+  body footer {
+    /*EL PIE DE PAGINA (FOOTER)*/ }
+    body footer .pieDePagina {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 30px;
+      background-color: #99FF99; }
+      body footer .pieDePagina #FF9966
+.direccion {
+        border: 3px solid #8B4513;
+        padding: 15px;
+        margin: 20px; }
+      body footer .pieDePagina .formulario form {
+        position: column;
+        border-radius: 20px;
+        border: 3px solid #8B4513;
+        padding: 15px;
+        margin: 20px; }
+        body footer .pieDePagina .formulario form input {
+          height: 30px;
+          width: 300px;
+          transition: all 2s; }
+        body footer .pieDePagina .formulario form input:focus {
+          height: 60px;
+          width: 500px;
+          font-size: 24px; }
+      body footer .pieDePagina .redes {
+        display: flex;
+        flex-direction: row;
+        background-color: #99FFFF;
+        padding: 10px; }
+  body .redes--redesSociales {
+    height: 40px;
+    width: 40px; }
+    body .redes--redesSociales .btn--facebook {
+      background-color: #99FFFF; }
+    body .redes--redesSociales .btn--instagram {
+      background-color: #99FFFF; }
+    body .redes--redesSociales .btn--twitter {
+      background-color: #99FF99; }
+    body .redes--redesSociales .btn--whatssap {
+      background-color: #99FF99; }
+
+/*cierre body*/
+/*BOTON PARA RESERVAS*/
+.botonReserva {
+  position: -webkit-sticky;
+  position: sticky;
+  border: 2px solid #8B4513;
+  background-color: #99FF99;
+  border-radius: 20px;
+  font-size: 20px;
+  top: 100px;
+  right: 5px;
+  width: 140px;
+  height: 50px;
+  padding: 5px;
+  position: fixed; }
+
+/* VIEWS ALOJAMIENTOS*/
+.descripcion {
+  display: flex;
+  background-color: #99FF99;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px; }
+
+.servicios {
+  display: flex;
+  background-color: #99FFFF;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px; }
+  .servicios .listServicios {
+    display: flex;
+    flex-direction: column; }
+
+.cf {
+  position: relative;
+  margin: 0 auto;
+  height: 400px;
+  width: 450px; }
+
+#cf img {
+  position: absolute;
+  left: 0px;
+  -webkit-transition: opacity 3s ease-in-out;
+  -moz-transition: opacity 3s ease-in-out;
+  -o-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out; }
+
+#cf img.top:hover {
+  opacity: 0; }
+
+/* VIEWS RESERVAS*/
+/* VIEWS PRECIOS */
+/* VIEWS CONTACTOS*/
+.formularioContacto {
+  margin: 20px;
+  padding: 20px;
+  background-color: #99FFFF; }
+
+.imgForm {
+  transform: rotate(20deg);
+  transform: rotate(-18deg); }
+
+.btn {
+  justify-content: space-around; }
